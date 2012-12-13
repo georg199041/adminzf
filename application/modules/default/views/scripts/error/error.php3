@@ -1,4 +1,4 @@
-<div id="exception-trace" class="e404-modal-container" style="display:none;">
+<div id="exception-trace" class="e404-modal-container">
 	<div class="e404-modal-wrapper">
 		<div class="e404-modal-header">Подробности фЭЙЛА</div>
 		<div class="e404-modal-body">
