@@ -33,6 +33,7 @@ a:hover { text-decoration: none; }
 	height: auto !important;
 	height: 100%;
 	min-height: 100%;
+	background: url('/layouts/e404/images/e404-background.jpg') no-repeat center center;
 	background-size: cover;
 	position: relative;
 }
@@ -45,6 +46,7 @@ a:hover { text-decoration: none; }
 	left: 50%;
 	z-index: 99999;
 	border: 1px solid #ebf1f6;
+	background: url('/layouts/e404/images/e404-bg-logo.png') no-repeat bottom right;
 	width: 710px;
 	height: 80%;
 	margin-left: -355px;
