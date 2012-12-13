@@ -1,0 +1,96 @@
+@CHARSET "UTF-8";
+
+.cbfw-tag_formText input{
+    border: 1px solid #434f56;
+    width: 230px;
+    height: 22px;
+    background-color: #f5f8fa;
+    font-size:13px;
+    font-family:'BlissPro','Verdana';
+    color:#434F56;
+    padding: 2px 4px;
+}
+.cbfw-tag_formTextarea textarea {
+    border: 1px solid #434f56;
+    width: 360px;
+    height: 168px;
+    background-color: #f5f8fa;
+    margin: 0;
+    padding: 2px 4px;
+    font-size:13px;
+    font-family:'BlissPro','Verdana';
+    color:#434F56;
+}
+.cbfw-element {
+	margin: 0 0 5px;
+}
+.cbfw-label_formText, .cbfw-label_formTextarea{
+	margin-bottom: 3px;
+}
+.cbfw-label label {
+    display: block;
+    font-size: 13px;
+    color: #434f56;
+}
+.cbfw-element_formSubmit {
+	height: 40px;
+}
+.cbfw-tag__submit {
+	float: left;
+	padding: 5px 10px 0 0;
+}
+.cbfw-description__submit {
+    float: left;
+    font-family: 'BlissPro-Italic','Verdana-Italic';
+    font-size: 13px;
+    line-height: 40px;
+    margin-top: 6px;
+}
+.cbfw-tag_formSubmit input {
+    border: 0 none;
+    border-radius: 15px 15px 15px 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Verdana';
+    font-size: 14px;
+    height: 31px;
+    margin: 4px 10px 0 0;
+    text-transform: uppercase;
+    width: 120px;
+    text-shadow: 0px -1px 0px #013E4D;
+    padding: 0 0 2px;
+    background: #0696c7; /* Old browsers */
+    background: -moz-linear-gradient(top, #08b8da 0%, #035ca7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#08b8da), color-stop(100%,#035ca7)); /* Chrome, Safari4+ */
+    background: -webkit-linear-gradient(top, #08b8da 0%,#35ca7 100%); /* Chrome10+, Safari5.1+ */
+    background: -o-linear-gradient(top, #08b8da 0%,#035ca7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #08b8da 0%,#035ca7 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #08B8DA 0%, #035CA7 100%) repeat scroll 0 0 transparent; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08b8da', endColorstr='#035ca7',GradientType=0 ); /* IE6-9 */
+}
+.cbfw-tag_formSubmit input:hover {
+    background: #06a3ce; /* Old browsers */
+    background: -moz-linear-gradient(top, #09dcee 0%, #045fa9 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#09dcee), color-stop(100%,#045fa9)); /* Chrome, Safari4+ */
+    background: -webkit-linear-gradient(top, #09dcee 0%,#045fa9 100%); /* Chrome10+, Safari5.1+ */
+    background: -o-linear-gradient(top, #09dcee 0%,#045fa9 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #09dcee 0%,#045fa9 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #09dcee 0%, #045fa9 100%) repeat scroll 0 0 transparent;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#09dcee', endColorstr='#045fa9',GradientType=0 ); /* IE6-9 */
+}
+.cbfw-errors {
+	color: #f00;
+	font-weight: 600;
+	font-size: 12px;
+}
+.cbfw-errors ul {
+	padding-left: 15px;
+}
+.cbfw-errors ul:before {
+	content: "↑";
+	float: left;
+	display: block;
+	font-size: 14px;
+	margin-top: -3px;
+	margin-left: -10px;
+}

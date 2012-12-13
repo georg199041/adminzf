@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+
+.cbfw-block {
+	padding: 10px;
+}
+.cbfw-form:last-child:after {
+	content: '.';
+	display: block;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	clear: both;
+}
+.cbfw-fieldset {
+	border: 1px solid #eee;
+}
+.cbfw-fieldset__center {
+	float: left;
+	width: 630px;
+	/*overflow: hidden;*/
+}
+.cbfw-fieldset__right {
+	float: right;
+	width: 330px;
+	/*overflow: hidden;*/
+}
+.cbfw-fieldset fieldset {
+	padding: 0;
+	margin: 10px;
+	border: 0 none;
+}
+.cbfw-tag_formText,
+.cbfw-tag_formPassword {
+	padding-right: 15px;
+}
+.cbfw-tag_formText input,
+.cbfw-tag_formPassword input {
+	width: 100%;
+}
+.input-append,
+#login .cbfw-tag__password {
+	padding-right: 100px;
+}
+.input-append button.btn,
+#login .cbfw-tag__password button.btn {
+	width: 85px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { /* Crome hack for valid positioning button */
+	.cbfw-tag__image button.btn,
+	#login .cbfw-tag__password button.btn {
+		position: absolute;
+	}
+}
+.cbfw-tag_formSelect {
+	/*padding-right: 10px;*/
+}
+.cbfw-tag_formSelect select {
+	width: 100%;
+}
+.cbfw-tag_formTextarea {
+	padding-right: 15px;
+}
+.cbfw-tag_formTextarea textarea {
+	width: 100%;
+}
+.cbfw-tag_formRadio label {
+	float: left;
+	margin-right: 20px;
+}
+.cbfw-tag_formRadio label input {
+	float: left;
+	margin-right: 10px;
+}
+.cbfw-tag_formRadio br {
+	display: none;
+}
+.cbfw-errors_formRadio {
+	clear: both;
+}
+
+.cbfw-block-users_admin-users_login {
+	width: 300px;
+	top: 50%;
+	margin: 100px auto 0;
+}

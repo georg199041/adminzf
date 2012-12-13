@@ -1,0 +1,130 @@
+@CHARSET "UTF-8";
+.front-focused-on-results {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	padding-bottom: 26px;
+	z-index: 20;
+	min-width: 1140px;
+	height: 320px;
+	overflow: hidden;
+}
+.front-focused-on-results-push {
+	height: 340px;
+}
+.front-focused-on-results__bg {
+	background: url("/layouts/default/images/main-pattern-dark.png");
+}
+.front-focused-on-results__center {
+	width: 850px;
+	margin: 0 auto;
+	background: #fff;
+	position: relative;
+}
+.front-focused-on-results__ws {
+	height: 27px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: -27px;
+	background: #fff;
+}
+.front-focused-on-results__bg-over {
+	background: url("/layouts/default/images/main-pattern-light.png");
+	padding-bottom: 25px;
+}
+.front-focused-on-results__content:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+	font-size: 0;
+}
+.front-focused-on-results__content {
+	float: left;
+	width: 710px;
+	padding-left: 70px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.front-focused-on-results__content p{
+	font-family: 'BlissPro-Italic';
+	font-size: 14px;
+}
+.front-focused-on-results__button-placeholder {
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	text-align: center;
+	top: 100%;
+	margin-top: -27px;
+	border-bottom: 4px solid #FFFFFF;
+}
+.front-focused-on-results__button {
+	display: inline-block;
+	height: 52px;
+	padding: 0 17px;
+	text-decoration: none;
+}
+.front-focused-on-results__button .corners {
+	position: relative;
+	display: block;
+	height: 52px;
+	padding: 0 34px;
+	text-decoration: none;
+	background: url("/layouts/default/images/buttons_center.png") top repeat-x;
+}
+.front-focused-on-results__button:hover .corners{
+	background: url("/layouts/default/images/buttons_center_hover.png") top repeat-x;
+}
+.front-focused-on-results__button .corners:before,
+.front-focused-on-results__button .corners:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	height: 52px;
+	width: 17px;
+}
+.front-focused-on-results__button .corners:before {
+	left: -17px;
+	background: url("/layouts/default/images/button_corners.png") top left no-repeat;
+}
+.front-focused-on-results__button:hover .corners:before {
+	left: -17px;
+	background: url("/layouts/default/images/button_corners_hover.png") top left no-repeat;
+}
+.front-focused-on-results__button .corners:after {
+	right: -17px;
+	background: url("/layouts/default/images/button_corners.png") top right no-repeat;
+}
+.front-focused-on-results__button:hover .corners:after {
+	right: -17px;
+	background: url("/layouts/default/images/button_corners_hover.png") top right no-repeat;
+}
+.front-focused-on-results__button .dots {
+	display: block;
+	position: relative;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #FFF;
+	text-shadow: 0 -1px 0 #333;
+	text-decoration: none;
+	padding: 16px 0 0;
+}
+.front-focused-on-results__button .dots:before,
+.front-focused-on-results__button .dots:after {
+	content: "";
+	background: url("/layouts/default/images/point.png") no-repeat;
+	position: absolute;
+	top: 23px;
+	width: 7px;
+	height: 6px;
+}
+.front-focused-on-results__button .dots:before {
+	left: -22px;
+}
+.front-focused-on-results__button .dots:after {
+	right: -22px;
+}

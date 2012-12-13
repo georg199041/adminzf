@@ -1,0 +1,70 @@
+
+.front-body-content-static ol {
+    list-style: none;
+    counter-reset: point;
+    font-size:14px;
+    padding-left: 22px;
+    margin:10px 0;
+}
+.front-body-content-static ol li {
+    margin-bottom: 6px;
+    padding-left: 33px;
+    position: relative;
+    min-height:21px;
+    line-height:19px;
+}
+.front-body-content-static ol li:before {
+    content: counter(point);
+    counter-increment: point 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../images/bg_list.png");
+    background-repeat:no-repeat;
+    width: 25px;
+    padding: 2px;
+    text-align: center;
+    margin-top: -2px;
+}
+.front-body-content-static ul {
+    list-style: none;
+    font-size:14px;
+    padding-left: 22px;
+}
+.front-body-content-static ul li {
+    margin-bottom: 6px;
+    padding-left: 33px;
+    position: relative;
+    min-height:21px;
+    line-height:19px;
+}
+.front-body-content-static ul li:before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../images/bg_list.png");
+    background-repeat:no-repeat;
+    width: 25px;
+    padding: 2px;
+    text-align: center;
+    margin-top: -2px;
+}
+blockquote {
+    font-style:italic;
+    background:url("../images/main-pattern-light.png") repeat scroll 0 0 transparent;
+    position:relative;
+    margin: 16px 12px 14px 0;
+    padding: 1px 20px 1px 13px;
+    right: -32px;
+}
+blockquote:before  {
+    background:url("../images/main-pattern-light.png") repeat scroll 0 0 transparent;
+    position:absolute;
+    width:6px;
+    height:100%;
+    left: -11px;
+    top: 0;
+    content:'.';
+    color:transparent;
+}

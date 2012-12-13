@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+
+.admin-info {
+	float: right;
+	position: relative;
+	margin: 13px 10px 0 0;
+	color: #efefef;
+}
+.admin-info__button {
+	height: 13px;
+	display: block;
+	line-height: normal;
+	padding: 3px 0 0 18px;
+	background: url("/layouts/admin/images/16px/info.png") top left no-repeat;
+	color: #efefef;
+	text-decoration: none;
+	font-size: 10px;
+}
+.admin-info__button:hover{
+	color: #efefef;
+	text-decoration: none;
+}
+.admin-info .messages {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	right: 0;
+	top: 24px;
+}
+.admin-info .message {
+	font-size: 11px;
+	padding: 7px;
+	padding-left: 30px;
+	padding-right: 22px;
+	margin: 5px;
+	list-style: none;
+	border: 1px solid rgba(0,0,0,0.85);
+	border-radius: 5px;
+	background-color: rgba(0,0,0,0.65);
+	background-position: 8px 7px;
+	background-repeat: no-repeat;
+	width: 150px;
+	overflow: hidden;
+	line-height: 16px;
+}
+.admin-info .message_success {
+	background-image: url("/layouts/admin/images/16px/accept.png");
+}
+.admin-info .message_warning {
+	background-image: url("/layouts/admin/images/16px/warning.png");
+}
+.admin-info .message_error {
+	background-image: url("/layouts/admin/images/16px/error.png");
+}
+.admin-info .message_info {
+	background-image: url("/layouts/admin/images/16px/info.png");
+}
+.admin-info .message .close {
+	display: block;
+	float: right;
+	margin-right: -15px;
+	width: 8px;
+	height: 8px;
+	background: url("/layouts/admin/images/close-symbol.png") no-repeat;
+}
+.admin-breadcrumbs{
+	padding: 0 10px 0;
+	margin-top: 10px;
+}

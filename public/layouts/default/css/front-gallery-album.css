@@ -1,0 +1,245 @@
+@CHARSET "UTF-8";
+.front-block-comments {
+    padding-top:3px;
+}
+.front-block-user-comments {
+    padding-bottom:4px;
+}
+.front-block-user-comments__tab_before {
+    background: url("../images/tab-user-comments.png") no-repeat scroll 0 0 transparent;
+    width:30px;
+    height:24px;
+    display:block;
+    float:left;
+}
+.front-block-user-comments__tab_after {
+    background: url("../images/tab-user-comments.png") no-repeat scroll 0 -24px transparent;
+    width:30px;
+    height:19px;
+    display:block;
+    float:left;
+    margin-left:-24px;
+}
+.front-block-user-comments__tab_center {
+    background: url("../images/tab-user-comments.png") repeat-x scroll 0 -46px transparent;
+    width:auto;
+    height:19px;
+    display:block;
+    float:left;
+    position:relative;
+}
+.front-block-user-comments__tab_user-name {
+    font-size:12px;
+    font-weight:bold;
+    color:#fff;
+    margin-left:-23px;
+    line-height:17px;
+}
+.front-block-user-comments__tab_user-data {
+    font-size:10px;
+    font-weight:normal;
+    color:#fff;
+    line-height:17px;
+}
+.front-block-user-comments__tab_arrow {
+    font-size:10px;
+    font-weight:normal;
+    color:#fff;
+    line-height:17px;
+}
+.front-block-user-comments-text {
+    font-size:14px;
+    clear:left;
+}
+.front-block-user-comments-text p {
+    line-height:17px;
+}
+.front-block-comment-add h3 {
+    margin:12px 0 12px 0;
+}
+.front-block-comment__input-box {
+    margin-bottom:5px;
+}
+.front-block-comment__input-box label{
+    display:block;
+    font-size:13px;
+    color:#434f56;
+}
+.front-block-comment__input-box input{
+    border:1px solid #434f56;
+    width:230px;
+    height:22px;
+    background-color:#f5f8fa;
+}
+.front-block-comment__input-box textarea {
+    border:1px solid #434f56;
+    width:370px;
+    height:168px;
+    background-color:#f5f8fa;
+    margin:0;
+}
+.front-block-comment__button {
+    border:0 none;
+    border-radius:15px;
+    font-size:14px;
+    font-family: 'Verdana';
+    text-transform:uppercase;
+    color:#fff;
+    height:31px;
+    width:120px;
+    cursor:pointer;
+    margin:5px 10px 0 0;
+    background: #0696c7; /* Old browsers */
+    background: -moz-linear-gradient(top, #08b8da 0%, #035ca7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#08b8da), color-stop(100%,#035ca7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #08b8da 0%,#35ca7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #08b8da 0%,#035ca7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #08b8da 0%,#035ca7 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #08b8da 0%,#035ca7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08b8da', endColorstr='#035ca7',GradientType=0 ); /* IE6-9 */
+}
+.front-block-comment__button span {
+    display:block;
+    padding-bottom:4px;
+    text-shadow:0 0 1px #013e4d;
+}
+.front-block-comment__required {
+    font-size:11px;
+    font-style:italic;
+}
+
+
+/***************************************************************************/
+.front-content-gallery-album {
+    width:620px;
+    background:url("/layouts/default/images/main-pattern-light.png") repeat scroll 0 0 transparent;
+    padding: 20px 0 10px;
+    margin-top:23px;
+}
+.front-content-gallery-album:after {
+    display:block;
+    height:0;
+    content:'.';
+    visibility:hidden;
+    clear:both;
+}
+.front-content-gallery-album p {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 6px;
+}
+.front-photogallery-slider__icons {
+	position: relative;
+	width: 580px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.front-photogallery-slider__width {
+	height: 86px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+}
+.front-photogallery-slider__item {
+	float: left;
+	width: 116px;
+	height: 86px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	overflow: hidden;
+}
+.front-photogallery-slider__item a {
+	text-decoration: none;
+	cursor: pointer;
+	display: block;
+	width: 104px;
+	height: 70px;
+	margin: 5px auto 0;
+	overflow: hidden;
+}
+.front-photogallery-slider__item a img {
+	width: 104px;
+	height: 70px;
+}
+.front-photogallery-slider__active-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url("/layouts/default/images/photogallery-active-bg.png") no-repeat top center;
+	width: 116px;
+	height: 86px;
+}
+.front-photogallery-slider__btn {
+	position: absolute;
+	top: 25px;
+	background: url("/layouts/default/images/photogallery-sbtn.png") no-repeat;
+	width: 28px;
+	height: 32px;
+}
+.front-photogallery-slider_btn-left {
+	left: 15px;
+	background-position: top right;
+}
+.front-photogallery-slider_btn-right {
+	right: 15px;
+	background-position: bottom right;
+}
+.front-photogallery-slider_btn-left:hover {
+	background-position: top left;
+}
+.front-photogallery-slider_btn-right:hover {
+	background-position: bottom left;
+}
+.front-photogallery__bigimage {
+	position: relative;
+	width: 570px;
+	margin: 0 auto;
+}
+.front-photogallery-bigimage__container {
+	position: relative;
+	width: 570px;
+	margin: 0 auto;
+	padding: 2px 0 0;
+	min-height: 70px;
+}
+.front-photogallery-bigimage__container img {
+	width: 570px;
+}
+.front-photogallery-bigimage__btn {
+	position: absolute;
+	display: block;
+	top: 0;
+	width: 54px;
+	height: 100%;
+	min-height: 62px;
+}
+.front-photogallery-bigimage_btn-left {
+	left: 10px;
+}
+.front-photogallery-bigimage_btn-right {
+	right: 10px;
+}
+.front-photogallery-bigimage__btn span {
+	position: absolute;
+	display: block;
+	top: 50%;
+	margin-top: -31px;
+	width: 54px;
+	height: 62px;
+	background: url("/layouts/default/images/photogallery-bbtn.png") no-repeat;
+}
+.front-photogallery-bigimage_btn-left span {
+	background-position: top right;
+}
+.front-photogallery-bigimage_btn-right span {
+	background-position: bottom right;
+}
+.front-photogallery-bigimage_btn-left:hover span {
+	background-position: top left;
+}
+.front-photogallery-bigimage_btn-right:hover span {
+	background-position: bottom left;
+}
+

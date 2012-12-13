@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+.front-content-gallery {
+    padding:5px 1px;
+    width:633px;
+    position:relative;
+}
+.front-content-gallery:after {
+    display:block;
+    height:0;
+    content:'.';
+    visibility:hidden;
+    clear:both;
+}
+.front-content-gallery-photos {
+    float:left;
+    width:198px;
+    height:160px;
+    background:url("../images/main-pattern-light.png") repeat scroll 0 0 transparent;
+    margin:0 13px 15px 0;
+}
+.front-content-gallery__unit-link img {
+    width:178px;
+    height:120px;
+    vertical-align:top;
+}
+.front-content-gallery__description {
+    font-size: 13px;
+    line-height:13px;
+    margin:0 10px 8px 12px;
+    text-align: left;
+    display: inline-block;
+    width: 176px;
+    height: 20px;
+    overflow:hidden;
+}
+.front-content-gallery__unit-link{
+	display: block;
+	height: 120px;
+	padding: 10px 10px 5px;
+}

@@ -1,0 +1,71 @@
+@CHARSET "UTF-8";
+@font-face {
+	font-family: 'BlissPro-Bold';
+	src: url('/layouts/default/fonts/blisspro-bold.eot');
+	src: url('/layouts/default/fonts/blisspro-bold.eot?#iefix') format('embedded-opentype'),
+		 url('/layouts/default/fonts/blisspro-bold.woff') format('woff'),
+		 url('/layouts/default/fonts/blisspro-bold.ttf') format('truetype'),
+		 url('/layouts/default/fonts/blisspro-bold.svg#blisspro-bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'BlissPro-BoldItalic';
+	src: url('/layouts/default/fonts/blisspro-italic.eot');
+	src: url('/layouts/default/fonts/blisspro-italic.eot?#iefix') format('embedded-opentype'),
+		 url('/layouts/default/fonts/blisspro-italic.woff') format('woff'),
+		 url('/layouts/default/fonts/blisspro-italic.ttf') format('truetype'),
+		 url('/layouts/default/fonts/blisspro-italic.svg#blisspro-italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'BlissPro-Italic';
+	src: url('/layouts/default/fonts/blisspro-italic.eot');
+	src: url('/layouts/default/fonts/blisspro-italic.eot?#iefix') format('embedded-opentype'),
+		 url('/layouts/default/fonts/blisspro-italic.woff') format('woff'),
+		 url('/layouts/default/fonts/blisspro-italic.ttf') format('truetype'),
+		 url('/layouts/default/fonts/blisspro-italic.svg#blisspro-italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'BlissPro';
+	src: url('/layouts/default/fonts/blisspro-regular.eot');
+	src: url('/layouts/default/fonts/blisspro-regular.eot?#iefix') format('embedded-opentype'),
+		 url('/layouts/default/fonts/blisspro-regular.woff') format('woff'),
+		 url('/layouts/default/fonts/blisspro-regular.ttf') format('truetype'),
+		 url('/layouts/default/fonts/blisspro-regular.svg#blisspro-regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/*@font-face {
+	font-family: 'Verdana';
+	src: url('/layouts/default/fonts/verdana.eot');
+	src: url('/layouts/default/fonts/verdana.eot?#iefix') format('embedded-opentype'),
+		 url('/layouts/default/fonts/verdana.woff') format('woff'),
+		 url('/layouts/default/fonts/verdana.ttf') format('truetype'),
+		 url('/layouts/default/fonts/verdana.svg#verdana') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Verdana-Bold';
+	src: url('/layouts/default/fonts/verdanab_0.eot');
+	src: url('/layouts/default/fonts/verdanab_0.eot?#iefix') format('embedded-opentype'),
+		 url('/layouts/default/fonts/verdanab_0.woff') format('woff'),
+		 url('/layouts/default/fonts/verdanab_0.ttf') format('truetype'),
+		 url('/layouts/default/fonts/verdanab_0.svg#verdanab_0') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Verdana-Italic';
+	src: url('/layouts/default/fonts/verdanai_0.eot');
+	src: url('/layouts/default/fonts/verdanai_0.eot?#iefix') format('embedded-opentype'),
+		 url('/layouts/default/fonts/verdanai_0.woff') format('woff'),
+		 url('/layouts/default/fonts/verdanai_0.ttf') format('truetype'),
+		 url('/layouts/default/fonts/verdanai_0.svg#verdanai_0') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}*/

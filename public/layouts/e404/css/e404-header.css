@@ -1,0 +1,30 @@
+.e404-push-top { height: 160px; }
+.e404-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+}
+.e404-header-width {
+	width: 1000px;
+	margin: 0 auto;
+	height: 160px;
+	padding: 15px 0 0;
+}
+.e404-logo {
+	display: block;
+	text-decoration: none;
+	height: 110px;
+	width: 140px;
+	margin: 0 auto;
+}
+.e404-header-text {
+	font-family: 'BlissPro';
+	font-size: 13px;
+	line-height: 18px;
+	color: #434f56;
+	text-align: center;
+	padding: 31px 0 0;
+}
+.e404-header-text a { color: #0e8dcd; }

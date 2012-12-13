@@ -1,0 +1,85 @@
+@CHARSET "UTF-8";
+
+
+.cbgw-block {
+	padding: 10px;
+}
+.cbgw-block table {
+	border-collapse: collapse;
+}
+.cbgw-block th {
+	padding: 5px 10px;
+	white-space: nowrap;
+	border-style: solid;
+	border-width: 0 1px;
+	border-color: #e7e7e7
+}
+.cbgw-block td {
+	padding: 5px 10px;
+	border-style: solid;
+	border-width: 1px 1px 0;
+	border-color: #e7e7e7
+}
+.cbgw-block th.cbgw-columnfirst,
+.cbgw-block td.cbgw-columnfirst {
+	border-left: 0px;
+}
+.cbgw-block th.cbgw-columnlast,
+.cbgw-block td.cbgw-columnlast {
+	border-right: 0px;
+}
+.cbgw-block td.cbgw-body-empty {
+	text-align: center;
+	padding: 20px;
+	border-left: 0px;
+	border-right: 0px;
+}
+.cbgw-block .cbgw-filter input {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 0;
+}
+.cbgw-block .cbgw-filter select {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 0;
+}
+.cbgw-block .cbgw-filter-form-submit {
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+	position: absolute;
+}
+.cbgw-fwrapper_formText{
+	padding-right: 15px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { /* Crome hack for valid positioning button */
+	.cbgw-fwrapper {
+		position: relative;
+	}
+	.cbgw-block input, .cbgw-block select {
+		position: static;
+		top:0;
+		left:0;
+	}
+}
+
+.cbgw-block .cbgw-column_formRadio br {
+	display: none;
+}
+.cbgw-block .cbgw-column_formRadio label {
+	display: block;
+	white-space: nowrap;
+	padding-left: 16px;
+}
+.cbgw-block .cbgw-column_formRadio label input {
+	float: left;
+	margin-left: -16px;
+}
+.cbgw-column__userinfo {
+	font-size: 10px;
+	line-height: normal;
+}
+
+

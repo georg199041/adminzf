@@ -1,0 +1,123 @@
+@CHARSET "UTF-8";
+
+.front-body-slider-body{
+	width: 100%;
+	left: 0;
+    position: absolute;
+	height: 340px;
+	min-width: 1140px;
+}
+.front-body-slider-top{
+	background: #FFF;
+	height: 25px;
+	margin: 0 auto;
+    width: 850px;
+}
+.front-body-slider-blackwhite{
+	position: relative;
+	top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 310px;
+    opacity: 1;
+    overflow: hidden;
+}
+.front-body-slider-rectangle{
+	position: absolute;
+	margin: 0 auto;
+    text-align: center;
+    width: 100%;
+	margin-top: -7px;
+	top: 25px;
+}
+.front-body-slider-rectangle img{
+	z-index: 12;
+	position: absolute;
+	left: 50%;
+	margin-left: -485px;
+}
+.front-body-slider-prewrap{
+	margin: 0 auto;
+	width: 1150px;
+}
+.front-body-slider-blackwhite-wrap{
+	list-style: none outside none;
+    width: 5000px;
+    overflow: hidden;
+    padding: 0;
+    margin-left: -1150px;
+}
+.front-body-slider-blackwhite__item{
+	float: left;
+}
+.front-body-slider-buttons{
+	margin: 0 auto;
+	background: url(/layouts/default/images/rectangle.png) no-repeat center;
+	height: 323px;
+	left: 50%;
+	margin-left: -485px;
+	width: 970px;
+	position: absolute;
+	top: 0;
+	z-index: 100;
+}
+.slider_buttons{
+	position: absolute;
+	height: 323px;
+    width: 100px;
+    top: 0;
+    z-index: 20;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.slider_buttons#slider_back{
+	left: 0;
+}
+.slider_buttons#slider_next{
+	right: 0;
+}
+.front-body-slider-color{
+	margin: 0 auto;
+    overflow: hidden;
+  	width: 970px;
+    z-index: 11;
+    height: 310px;
+    margin-top: -310px;
+    position: relative;
+}
+.front-body-slider-color-wrap{
+	list-style: none outside none;
+     width: 100000px;
+    padding: 0;
+    position: absolute;
+}
+.front-body-slider-color__item{
+	width: 97px;
+	height: 310px;
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+}
+.front-body-slider-color__item.active{
+	z-index: 3;
+	opacity: 1;
+}
+.front-body-slider-color__item img{
+	width: 970px;
+	height: 310px;
+}
+.front-body-slider-color-cutter-container{
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.front-body-slider-color-cutter{
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	width: 970px;
+	height: 323px;
+	margin-top: -6px;
+	background: url(../images/rectangle.png);
+}

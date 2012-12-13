@@ -1,0 +1,303 @@
+@CHARSET "UTF-8";
+@import '/layouts/default/css/fonts.css';
+@import '/layouts/default/css/front-header.css';
+@import '/layouts/default/css/front-content.css';
+@import '/layouts/default/css/front-footer.css';
+@import '/layouts/default/css/front-contents-view-static.css';
+@import '/layouts/default/css/front-recommendations.css';
+@import '/layouts/default/css/front-gallery.css';
+@import '/layouts/default/css/front-gallery-album.css';
+@import '/layouts/default/css/front-personal.css';
+@import '/layouts/default/css/front-focused-on-results.css';
+@import '/layouts/default/css/front-google.css';
+html, body, img, div, a, span {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	height: 100%;
+	font-family: 'BlissPro', 'Verdana', 'Arial';
+	font-size: 14px;
+}
+html {
+	background: #EAEFF3;
+}
+body{
+	color: #434f56;
+	min-width: 1140px;
+}
+img {
+	border: 0 none;
+}
+p {
+    font-size:14px;
+    font-weight:normal;
+    line-height:18px;
+    margin:9px 0;
+}
+h1 {
+    font-size:36px;
+    font-weight:normal;
+    font-family: 'Verdana';
+    text-transform:uppercase;
+}
+h2 {
+    font-size:26px;
+    font-weight:normal;
+    font-family: 'Verdana';
+    text-transform:uppercase;
+    margin-bottom: 14px;
+}
+h3 {
+    font-size:18px;
+    font-weight:normal;
+    font-family: 'Verdana';
+    text-transform:uppercase;
+    margin-bottom: 10px;
+}
+h4 {
+    font-size:13px;
+    font-weight:normal;
+    font-family: 'Verdana';
+    text-transform:uppercase;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+input[type='submit']::-moz-focus-inner{
+    padding:0;
+    border:0
+}
+em, i{
+	font-family: 'BlissPro-Italic';
+}
+.front_clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+	font-size: 0;
+}
+.front_header-text{
+	font-size: 12px;
+	color: #4A4E4F;
+}
+.front_socials-margin{
+	margin-top: 8px;
+}
+
+.front-body-content {
+    float: left;
+    height: 100%;
+    width:620px;
+    padding: 0 20px 30px 210px;
+    background-color:#fff;
+}
+.front-body-content:last-child:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.front-body-content a {
+    color: #0e8dcd;
+}
+.front-body-content a:hover {
+    color:#00aaff;
+}
+.front-body-sidebar-left {
+    float: left;
+    height: 100%;
+    margin: 0px 0 0 -100%;
+    position: relative;
+    width: 210px;
+}
+.front-body-sidebar-left ul {
+    width:170px;
+    margin:25px auto 0;
+}
+.front-body-sidebar-left ul li {
+    font-size:14px;
+    font-weight:normal;
+    font-family: 'Verdana';
+    text-transform:uppercase;
+    text-align:center;
+}
+.front-body-sidebar-left_center {
+    text-decoration:none;
+    color:#434f56;
+    display:block;
+    min-height:17px;
+    padding: 3px 0;
+    background-color:#f6f8f9;
+}
+.front-body-sidebar-left_active,
+.front-body-sidebar-left_center:hover {
+    text-decoration:none;
+    color:#434f56;
+    background-color:#dbe9f2;
+}
+.front-body-sidebar-left_indent {
+    height:2px;
+    background-color:#f6f8f9;
+}
+.front-body-sidebar-left_top {
+    text-decoration:none;
+    color:#434f56;
+    display:block;
+    background: url("../images/main-pattern-dark.png") repeat scroll 0 0 transparent;
+    min-height: 18px;
+    padding: 12px 0;
+    font-size:15px;
+}
+.front-body-sidebar-left_top:hover {
+    text-decoration:none;
+    color:#434f56;
+}
+.front-body-sidebar-left_bottom {
+    background: url(../images/bg_bottom_menu.png);
+    height:30px;
+    padding:0;
+}
+.front-body-slider-blackwhite-left{
+	left: 0;
+	width: 50%;
+	height: 310px;
+	position: absolute;
+	/*background: url(/uploads/front-page-slider/main-promo-collage--left.jpg) top right;*/
+	margin-left: -480px;
+}
+.front-body-slider-blackwhite-right{
+	right: 0;
+	width: 50%;
+	height: 310px;
+	position: absolute;
+	/*background: url(/uploads/front-page-slider/main-promo-collage--right.jpg) top left;*/
+	margin-right: -480px;
+}
+.front-body-slider-blackwhite-left__item{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: top right;
+}
+.front-body-slider-blackwhite-right__item{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: top left;
+}
+.front-body-slider-blackwhite-left__item.active {
+    opacity: 1;
+    z-index: 3;
+}
+.front-body-slider-blackwhite-right__item.active {
+    opacity: 1;
+    z-index: 3;
+}
+.front-push-slider{
+	height: 340px;
+}
+/*browser*/
+#getBrowser
+{
+	text-align: center;
+	color: #000;
+	line-height: 130%;
+	padding: 0 8px 8px;
+	font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+	font-size: 11px;
+	display: none;
+	background-color: rgb(229, 232, 237);
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 30;
+	width: 100%;
+}
+#getBrowser DIV.info
+{
+	width: 960px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#getBrowser DIV.close
+{
+	width: 20px;
+	height: 13px;
+	line-height: 10px;
+	padding-top: 0px;
+	padding-right: 45px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-top: 4px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 890px;
+	position: absolute;
+	cursor: pointer;
+	background-image: url("../images/close.png");
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position-x: right;
+	background-position-y: top;
+	background-color: transparent;
+}
+#getBrowser .browser
+{
+	width: 100px;
+	height: 20px;
+	text-align: center;
+	padding-top: 75px;
+	float: left;
+}
+#getBrowser .hrefs
+{
+	width: 400px;
+	height: 100px;
+	padding-top: 5px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#getBrowser .hrefs A
+{
+	color: #000;
+}
+#getBrowser .opera
+{
+	background: url("../images/opera.png") top center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+#getBrowser .safari
+{
+	background: url("../images/safari.png") top center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+#getBrowser .firefox
+{
+	background: url("../images/firefox.png") top center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+#getBrowser .chrome
+{
+	background: url("../images/chrome.png") top center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+/*browser end*/

@@ -1,0 +1,50 @@
+@CHARSET "UTF-8";
+.front-content-personal {
+    width: 640px;
+    margin: -4px 0 16px 0;
+    background:url("../images/main-pattern-light.png") repeat scroll 0 0 transparent;
+    position: relative;
+    overflow: hidden;
+}
+.front-content-personal:after {
+    display:block;
+    height:0;
+    content:'.';
+    visibility:hidden;
+    clear:both;
+}
+.front-personal_with-img {
+	padding-left: 110px;
+	width: 530px;
+}
+.front-content-personal__photo {
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 110px;
+    border-right: 3px solid #fff;
+}
+.front-content-personal-employee {
+    /*width:508px;*/
+    min-height:130px;
+    float:left;
+    /*margin-left:3px;*/
+    padding-left:19px;
+    padding-bottom:20px;
+}
+.front-content-personal-employee h4 {
+    margin:18px 0 0 0;
+}
+.front-content-personal-employee-text{
+    font-size:13px;
+    /*width:320px;*/
+    margin-top:-2px;
+    line-height:15px;
+}
+.front-content-personal-employee-text p{
+    line-height:16px;
+}
+.front-content-personal-employee-text__contact-details{
+    display:block;
+}

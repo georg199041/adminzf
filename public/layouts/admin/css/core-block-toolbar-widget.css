@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+
+.cbtw-block {
+	padding: 10px 0;
+	margin: 0 0 15px;
+	border-bottom: 2px solid #666;
+}
+.cbtw-block:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+	font-size: 0;
+}
+.cbtw-title {
+	float: left;
+	font-size: 24px;
+	padding: 0 0 5px;
+}
+.cbtw-buttons {
+	float: right;
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.cbtw-buttons li {
+	float: left;
+	padding: 0 0 0 20px;
+	margin: 0;
+}
+.cbtw-buttons button {
+	cursor: pointer;
+	/*font-size: 12px;*/
+}
+.cbtw-links {
+	float: left;
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.cbtw-links li {
+	float: left;
+	padding: 0 20px 0 0;
+	margin: 0;
+}
