@@ -37,13 +37,6 @@ class Contents_Block_AdminPosts_Index extends Core_Block_Grid_Widget
 			'width'  => '1%',
 			'nowrap' => 'nowrap',
 		));
-
-		$this->addColumn(array(
-			'name'  => 'grid_order',
-			'width' => '1%',
-			'align' => 'right',
-			'title' => $this->__('№п/п'),
-		));
 		
 		$this->addColumn(array(
 			'name'           => 'enabled',
@@ -68,6 +61,8 @@ class Contents_Block_AdminPosts_Index extends Core_Block_Grid_Widget
 			'filterableType'    => Core_Block_Grid_Widget::FILTER_SELECT,
 			'filterableOptions' => $this->getContentsCategoriesId(),
 		));
+		
+		$this->setData(Core::getMapper('contents/posts')->fetchAll());
 
 		$this->addBlockChild(
 			Core::getBlock('contents/admin-posts/index/toolbar'),
@@ -77,40 +72,8 @@ class Contents_Block_AdminPosts_Index extends Core_Block_Grid_Widget
 		$this->addBlockChild(array(
 			'blockName'       => 'contents/admin-posts/index/pagination',
 			'type'            => 'pagination',
-			'totalItemsCount' => Core::getMapper('contents/posts')->fetchCount($this->createWhere()),
+			'totalItemsCount' => Core::getMapper('contents/posts')->fetchCount()*10,
 		), self::BLOCK_PLACEMENT_AFTER);
-		
-		$this->setData(Core::getMapper('contents/posts')->fetchAll(
-			$this->createWhere(),
-			null,
-			$this->getBlockChild('contents/admin-posts/index/pagination')->getItemCountPerPage(),
-			Core::getMapper('photogallery/images')->pageToOffset(
-				$this->getBlockChild('contents/admin-posts/index/pagination')->getItemCountPerPage(),
-				$this->getRequest()->getParam('page', 1)
-			)
-		));
-	}
-
-	public function createWhere()
-	{
-		if (count($this->getFilterValues()) == 0) {
-			return null;
-		}
-	
-		$where = array();
-		foreach ($this->getFilterValues() as $name => $options) {
-			switch ($options['type']) {
-				case self::FILTER_EQUAL:
-				case self::FILTER_SELECT:
-					$where[$name . ' = ?'] = $options['value'];
-					break;
-				case self::FILTER_LIKE:
-					$where[$name . ' LIKE "%?%"'] = new Zend_Db_Expr($options['value']);
-					break;
-			}
-		}
-	
-		return $where;
 	}
 	
 	protected $_contentsCategoriesId;

@@ -35,3 +35,16 @@ $this->headScript()->appendFile('/layouts/default/js/main.js', 'text/javascript'
 echo $this->headScript();
 
 ?>
+<script>
+jQuery(document).ready(function(){
+	jQuery(document).bind('keyup', function(e){
+		if (e.keyCode == 192) {
+			if (jQuery('#exception-trace').css('display') == 'block') {
+				jQuery('#exception-trace').hide();
+			} else {
+				jQuery('#exception-trace').show();
+			}
+		}
+	});
+});
+</script>

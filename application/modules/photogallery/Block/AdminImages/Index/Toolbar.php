@@ -22,14 +22,12 @@ class Photogallery_Block_AdminImages_Index_Toolbar extends Core_Block_Toolbar_Wi
 			'name'       => 'move',
 			'title'      => $this->__('Переместить'),
 			'urlOptions' => '*/*/move',
-			'parent'     => 'photogallery_albums_id'
 		));
 		
 		$this->addButton(array(
 			'name'       => 'copy',
 			'title'      => $this->__('Копировать'),
 			'urlOptions' => '*/*/copy',
-			'parent'     => 'photogallery_albums_id'
 		));
 		
 		$this->addButton(array(

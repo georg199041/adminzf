@@ -11,7 +11,6 @@ class Navigation_Block_Index_HeaderMenu extends Core_Block_View
 	{
 		if ($page instanceof Zend_Navigation_Page) {
 			if ($page->isActive()) {
-				$this->headTitle($page->getLabel());
 				return true;
 			}
 			

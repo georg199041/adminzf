@@ -116,9 +116,9 @@ class Photogallery_AdminImagesController extends Core_Controller_Action
     		Core::getBlock('application/admin/messenger')->addError($this->__('Не выбрана ни одна запись'));
     	} else {
     		try {
-    			foreach ($ids as $id => $selected) {
+    			foreach ($ids as $id) {
     				$model = Core::getMapper('photogallery/images')->find($id);
-   					$model->setPhotogalleryAlbumsId($this->getRequest()->getParam('photogallery_albums_id'));
+   					$model->setContactsGroupsId($this->getRequest()->getParam('photogallery_albums_id'));
    					$model->save();
     			}
 				
@@ -138,10 +138,10 @@ class Photogallery_AdminImagesController extends Core_Controller_Action
     		Core::getBlock('application/admin/messenger')->addError($this->__('Не выбрана ни одна запись'));
     	} else {
     		try {
-    			foreach ($ids as $id => $selected) {
+    			foreach ($ids as $id) {
     				$model = Core::getMapper('photogallery/images')->find($id);
     				$model->setId(null);
-   					$model->setPhotogalleryAlbumsId($this->getRequest()->getParam('photogallery_albums_id'));
+   					$model->setContactsGroupsId($this->getRequest()->getParam('photogallery_albums_id'));
    					$model->save();
     			}
 				

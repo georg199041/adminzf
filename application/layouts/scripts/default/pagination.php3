@@ -98,7 +98,7 @@ function isViewedPage($object, $page)
 			<?php if ($this->current != $page): ?>
 				<a href="<?php echo $this->url(array($this->widget->getRequestPageKey() => $page)); ?>"><?php echo $page; ?></a>
 			<?php else: ?>
-				<span class="disabled"><b><?php echo $page; ?></b></span>
+				<span class="disabled"><?php echo $page; ?></span>
 			<?php endif; ?>
 		<?php else: ?>
 		    <?php if ($this->pageCount > 11 && $page < $this->current && !$push1): $push1 = true; ?>

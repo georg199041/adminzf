@@ -26,10 +26,6 @@ class Documents_Block_AdminPosts_Edit extends Core_Block_Form_Widget
 			'class' => 'mce',
 		));
 
-		$this->addElement('text', 'order', array(
-			'label' => $this->__('Номер по порядку'),
-		));
-		
 		$this->addElement('text', 'image', array(
 			'label' => $this->__('Картинка'),
 		));
@@ -44,18 +40,8 @@ class Documents_Block_AdminPosts_Edit extends Core_Block_Form_Widget
 			'decorator' => 'CombinedElement',
 		));
 		
-		$this->addElement('textarea', 'meta_keywords', array(
-			'label' => $this->__('META тег "keywords"'),
-			'rows' => 2,
-		));
-		
-		$this->addElement('textarea', 'meta_description', array(
-			'label' => $this->__('META тег "description"'),
-			'rows' => 7,
-		));
-		
 		$this->addDisplayGroup(array('title', 'description'), 'center');
-		$this->addDisplayGroup(array('order', 'image', 'enabled', 'meta_keywords', 'meta_description'), 'right');
+		$this->addDisplayGroup(array('image', 'enabled'), 'right');
 		
 		if (isset(Core::getSession('admin')->formData)) {
 			$this->setDefaults(Core::getSession('admin')->formData);

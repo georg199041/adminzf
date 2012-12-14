@@ -11,7 +11,7 @@ class Photogallery_Block_Index_AlbumImages extends Core_Block_View
 	
 	public function init()
 	{
-		$this->headTitle($this->getAlbum()->getTitle(), 'PREPEND');
+		$this->headTitle($this->getAlbum()->getTitle());
 	}
 	
 	public function getCacheId(Core_Block_View $block)

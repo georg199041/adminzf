@@ -18,7 +18,7 @@ class Staff_Block_AdminStaff_Index extends Core_Block_Grid_Widget
 		$this->addColumn(array(
 			'name'  => 'id',
 			'title' => $this->__('ID'),
-			'width' => '1%',
+			'width' => '2',
 			'align' => 'right',
 		));
 		
@@ -32,13 +32,6 @@ class Staff_Block_AdminStaff_Index extends Core_Block_Grid_Widget
 		));
 		
 		$this->addColumn(array(
-			'name'  => 'grid_order',
-			'width' => '1%',
-			'align' => 'right',
-			'title' => $this->__('№п/п'),
-		));
-		
-		$this->addColumn(array(
 			'name'              => 'enabled',
 			'type'              => 'checkbox',
 			'title'             => $this->__('Вкл'),
@@ -49,6 +42,8 @@ class Staff_Block_AdminStaff_Index extends Core_Block_Grid_Widget
 			'formactionOptions' => '*/*/enabled',
 			'formactionBind'    => array('value' => 'enabled', 'ids' => 'id')
 		));
+		
+		$this->setData(Core::getMapper('staff/staff')->fetchAll());
 
 		$this->addBlockChild(
 			Core::getBlock('staff/admin-staff/index/toolbar'),
@@ -58,39 +53,7 @@ class Staff_Block_AdminStaff_Index extends Core_Block_Grid_Widget
 		$this->addBlockChild(array(
 			'blockName'       => 'staff/admin-staff/index/pagination',
 			'type'            => 'pagination',
-			'totalItemsCount' => Core::getMapper('staff/staff')->fetchCount($this->createWhere()),
+			'totalItemsCount' => Core::getMapper('staff/staff')->fetchCount(),
 		), self::BLOCK_PLACEMENT_AFTER);
-		
-		$this->setData(Core::getMapper('staff/staff')->fetchAll(
-			$this->createWhere(),
-			null,
-			$this->getBlockChild('staff/admin-staff/index/pagination')->getItemCountPerPage(),
-			Core::getMapper('photogallery/images')->pageToOffset(
-				$this->getBlockChild('staff/admin-staff/index/pagination')->getItemCountPerPage(),
-				$this->getRequest()->getParam('page', 1)
-			)
-		));
-	}
-
-	public function createWhere()
-	{
-		if (count($this->getFilterValues()) == 0) {
-			return null;
-		}
-	
-		$where = array();
-		foreach ($this->getFilterValues() as $name => $options) {
-			switch ($options['type']) {
-				case self::FILTER_EQUAL:
-				case self::FILTER_SELECT:
-					$where[$name . ' = ?'] = $options['value'];
-					break;
-				case self::FILTER_LIKE:
-					$where[$name . ' LIKE "%?%"'] = new Zend_Db_Expr($options['value']);
-					break;
-			}
-		}
-	
-		return $where;
 	}
 }

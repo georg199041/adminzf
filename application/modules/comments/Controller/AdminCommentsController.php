@@ -59,16 +59,12 @@ class Comments_AdminCommentsController extends Core_Controller_Action
     
     public function deleteAction()
     {
-        $ids = $this->getRequest()->getParam('ids');
-        if (!is_array($ids) && null !== $ids) {
-        	$ids = array($ids => 1);
-        }
-    	
-    	if (null === $ids) {
+    	$ids = $this->getRequest()->getParam('ids');
+    	if (!is_array($ids)) {
     		Core::getBlock('application/admin/messenger')->addError($this->__('Не выбрана ни одна запись'));
     	} else {
     		try {
-    			foreach ($ids as $id => $selected) {
+    			foreach ($ids as $id) {
     				$model = Core::getMapper('comments/comments')->find($id);
     				$model->delete();
     			}

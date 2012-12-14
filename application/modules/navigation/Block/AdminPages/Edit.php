@@ -72,19 +72,9 @@ class Navigation_Block_AdminPages_Edit extends Core_Block_Form_Widget
 			'uncheckedValue' => 'NO',
 			'value'          => 'YES',
 		));
-
-		$this->addElement('textarea', 'meta_keywords', array(
-			'label' => $this->__('META тег "keywords"'),
-			'rows' => 2,
-		));
-		
-		$this->addElement('textarea', 'meta_description', array(
-			'label' => $this->__('META тег "description"'),
-			'rows' => 5,
-		));
 		
 		$this->addDisplayGroup(array('navigation_pages_id', 'label', 'uri', 'module', 'controller', 'action', 'params'), 'center');
-		$this->addDisplayGroup(array('route', 'type', 'enabled', 'reset_params', 'encode_url', 'meta_keywords', 'meta_description'), 'right');
+		$this->addDisplayGroup(array('route', 'type', 'enabled', 'reset_params', 'encode_url'), 'right');
 		
 		if (isset(Core::getSession('admin')->formData)) {
 			$this->setDefaults(Core::getSession('admin')->formData);
@@ -118,7 +108,7 @@ class Navigation_Block_AdminPages_Edit extends Core_Block_Form_Widget
 	{
 		$config = Zend_Registry::get('config');
 		
-		$routes = array('' => $this->__('По умолчанию'));		
+		$routes = array();		
 		foreach ((array) $config['resources']['router']['routes'] as $name => $options) {
 			$label = (string) $options['label'];
 			if (!$label) {

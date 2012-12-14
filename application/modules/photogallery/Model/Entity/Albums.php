@@ -43,10 +43,4 @@ class Photogallery_Model_Entity_Albums extends Core_Model_Entity_Abstract
 		$this->getImageResizedToCrop178x120();
 		return parent::getImage();
 	}
-	
-	public function getGridOrder()
-	{
-		$order = $this->getOrder();
-		return $order ? $order : '-';
-	}
 }

@@ -25,10 +25,6 @@ class Photogallery_Block_AdminAlbums_Edit extends Core_Block_Form_Widget
 			'rows' => 15,
 			'class' => 'mce',
 		));
-
-		$this->addElement('text', 'order', array(
-			'label' => $this->__('Номер по порядку'),
-		));
 		
 		$this->addElement('checkbox', 'enabled', array(
 			'label'          => $this->__('Включено'),
@@ -36,18 +32,8 @@ class Photogallery_Block_AdminAlbums_Edit extends Core_Block_Form_Widget
 			'uncheckedValue' => 'NO',
 		));
 
-		$this->addElement('textarea', 'meta_keywords', array(
-			'label' => $this->__('META тег "keywords"'),
-			'rows' => 2,
-		));
-		
-		$this->addElement('textarea', 'meta_description', array(
-			'label' => $this->__('META тег "description"'),
-			'rows' => 7,
-		));
-		
 		$this->addDisplayGroup(array('title', 'alias', 'description'), 'center');
-		$this->addDisplayGroup(array('order', 'image', 'enabled', 'meta_keywords', 'meta_description'), 'right');
+		$this->addDisplayGroup(array('image', 'enabled'), 'right');
 
 		if (isset(Core::getSession('admin')->formData)) {
 			$this->setDefaults(Core::getSession('admin')->formData);

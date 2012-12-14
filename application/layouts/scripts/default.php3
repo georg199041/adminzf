@@ -3,7 +3,6 @@
 <head>
 	<link rel="favicon.ico" href="/favicon.ico" type="image/x-icon">
 	<?php $this->headTitle($this->translate('РОЙ')); ?>
-	<?php $this->headTitle($this->__('РОЙ')); ?>
 	<?php echo $this->partial('default/head.php3'); ?>
 	<script type="text/javascript" src="//vk.com/js/api/openapi.js?63"></script>
 
@@ -33,11 +32,6 @@
 		<?php echo Core::getBlock('frontpage/index/text'); ?>
 		<?php endif; ?>
 		<?php var_dump(Zend_Controller_Front::getInstance()->getRequest()->getParams()); ?>
-	<div class="front-body" style="border: 2px dashed green;">
-		<div class="front-push-top"></div>
-		
-		<?php var_dump(Zend_Controller_Front::getInstance()->getRequest()->getParams()); ?>
-		<?php echo Zend_Controller_Front::getInstance()->getRouter()->getCurrentRouteName(); ?>
 		<div class="front-push-bottom"></div>
 	</div>
 	<div class="front-footer">
@@ -52,15 +46,6 @@
 					</div>
 				</div>
 				<div class="front-footer-box-line"></div>
-
-						copyrights
-					</div>
-					<div class="front-footer-box-rights-logo">
-						logo
-					</div>
-				</div>
-				
-
 			</div>
 		</div>
 	</div>

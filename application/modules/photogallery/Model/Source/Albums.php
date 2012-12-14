@@ -21,7 +21,6 @@ class Photogallery_Model_Source_Albums extends Core_Model_Source_DbTable
 		
 		$select->columns(array('image' => new Zend_Db_Expr('(' . $sub . ')')));
 		$select->where('`photogallery_albums`.`enabled` = ?', 'YES');
-		$select->order('order');
 		
 		return $this->_fetch($select);
 	}

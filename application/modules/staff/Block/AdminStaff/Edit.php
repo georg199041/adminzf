@@ -26,10 +26,6 @@ class Staff_Block_AdminStaff_Edit extends Core_Block_Form_Widget
 			'class' => 'mce',
 		));
 
-		$this->addElement('text', 'order', array(
-			'label' => $this->__('Номер по порядку'),
-		));
-		
 		$this->addElement('text', 'phone', array(
 			'label' => $this->__('Телефон'),
 		));
@@ -56,7 +52,7 @@ class Staff_Block_AdminStaff_Edit extends Core_Block_Form_Widget
 		));
 		
 		$this->addDisplayGroup(array('name', 'description'), 'center');
-		$this->addDisplayGroup(array('order', 'phone', 'email', 'skype', 'image', 'enabled'), 'right');
+		$this->addDisplayGroup(array('phone', 'email', 'skype', 'image', 'enabled'), 'right');
 		
 		if (isset(Core::getSession('admin')->formData)) {
 			$this->setDefaults(Core::getSession('admin')->formData);

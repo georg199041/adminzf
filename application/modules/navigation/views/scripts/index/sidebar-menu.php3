@@ -6,11 +6,6 @@
 		</li>
 		<li class="front-body-sidebar-left_indent"></li>
 		<?php foreach ($sidebar as $item): ?>
-			<?php
-				if ($item->isActive()) {
-					
-				}
-			?>
 			<li>
 				<a class="front-body-sidebar-left_center <?php if ($item->isActive()): ?>front-body-sidebar-left_active<?php endif; ?>" href="<?php echo $item->getHref(); ?>">
 					<?php echo $item->getLabel(); ?>

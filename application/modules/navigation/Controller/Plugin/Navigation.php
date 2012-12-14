@@ -22,8 +22,6 @@ class Navigation_Controller_Plugin_Navigation extends Zend_Controller_Plugin_Abs
 				'reset_params' => $item->getResetParams() == 'YES' ? true : false,
 				'encode_url'   => $item->getEncodeUrl() == 'YES' ? true : false,
 				'order'        => $item->getOrder(),
-				'meta_keywords'    => $item->getMetaKeywords(),
-				'meta_description' => $item->getMetaDescription(),
 			);
 			
 			if ($item->getType() == 'URI' && $item->getUri() == $_SERVER['REQUEST_URI']) {
@@ -40,26 +38,12 @@ class Navigation_Controller_Plugin_Navigation extends Zend_Controller_Plugin_Abs
 		return $pages;
 	}
 	
-	public function setHeadMeta($container)
-	{
-		$page = $container->findOneByActive(true);
-		if ($page) {
-			if ($page->get('meta_keywords')) {
-				Core::getBlock('application/default')->headMeta()->setName('keywords', $page->get('meta_keywords'));
-			}
-			if ($page->get('meta_description')) {
-				Core::getBlock('application/default')->headMeta()->setName('description', $page->get('meta_description'));
-			}
-		}
-	}
-	
 	public function preDispatch(Zend_Controller_Request_Abstract $request)
 	{
 		if (false === $this->_loaded) {
 			$container = Zend_Registry::get('Zend_Navigation')->findOneById('frontend');
 			$collection = Core::getMapper('navigation/pages')->fetchTree();
 			$container->addPages($this->_buildNavigation($collection));
-			$this->setHeadMeta($container);
 			$this->_loaded = true;
 		}		
 	}

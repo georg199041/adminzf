@@ -30,13 +30,6 @@ class Recommendations_Block_AdminPosts_Index extends Core_Block_Grid_Widget
 			'linkOptions'    => '*/*/edit',
 			'linkBindFields' => array('id'),
 		));
-
-		$this->addColumn(array(
-			'name'  => 'grid_order',
-			'width' => '1%',
-			'align' => 'right',
-			'title' => $this->__('№п/п'),
-		));
 		
 		$this->addColumn(array(
 			'name'              => 'enabled',
@@ -49,6 +42,8 @@ class Recommendations_Block_AdminPosts_Index extends Core_Block_Grid_Widget
 			'formactionOptions' => '*/*/enabled',
 			'formactionBind'    => array('value' => 'enabled', 'ids' => 'id')
 		));
+		
+		$this->setData(Core::getMapper('recommendations/posts')->fetchAll());
 
 		$this->addBlockChild(
 			Core::getBlock('recommendations/admin-posts/index/toolbar'),
@@ -58,39 +53,7 @@ class Recommendations_Block_AdminPosts_Index extends Core_Block_Grid_Widget
 		$this->addBlockChild(array(
 			'blockName'       => 'recommendations/admin-posts/index/pagination',
 			'type'            => 'pagination',
-			'totalItemsCount' => Core::getMapper('recommendations/posts')->fetchCount($this->createWhere()),
+			'totalItemsCount' => Core::getMapper('recommendations/posts')->fetchCount(),
 		), self::BLOCK_PLACEMENT_AFTER);
-		
-		$this->setData(Core::getMapper('recommendations/posts')->fetchAll(
-			$this->createWhere(),
-			null,
-			$this->getBlockChild('recommendations/admin-posts/index/pagination')->getItemCountPerPage(),
-			Core::getMapper('recommendations/posts')->pageToOffset(
-				$this->getBlockChild('recommendations/admin-posts/index/pagination')->getItemCountPerPage(),
-				$this->getRequest()->getParam('page', 1)
-			)
-		));
-	}
-
-	public function createWhere()
-	{
-		if (count($this->getFilterValues()) == 0) {
-			return null;
-		}
-	
-		$where = array();
-		foreach ($this->getFilterValues() as $name => $options) {
-			switch ($options['type']) {
-				case self::FILTER_EQUAL:
-				case self::FILTER_SELECT:
-					$where[$name . ' = ?'] = $options['value'];
-					break;
-				case self::FILTER_LIKE:
-					$where[$name . ' LIKE "%?%"'] = new Zend_Db_Expr($options['value']);
-					break;
-			}
-		}
-	
-		return $where;
 	}
 }

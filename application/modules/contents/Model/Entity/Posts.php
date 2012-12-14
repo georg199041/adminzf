@@ -15,10 +15,4 @@ class Contents_Model_Entity_Posts extends Core_Model_Entity_Abstract
 		
 		return date('d.m.Y', $this->_data['modified_ts']);
 	}
-	
-	public function getGridOrder()
-	{
-		$order = $this->getOrder();
-		return $order ? $order : '-';
-	}
 }

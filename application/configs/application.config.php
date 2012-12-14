@@ -69,7 +69,7 @@ return array (
 		'image' => array (),
 		'router' => array (
 			'routes' => array (
-				/*'default' => array (
+				'default' => array (
 					'label'        => 'По умолчанию',
 					'type'         => 'Zend_Controller_Router_Route',
 					'route'        => ':module/:controller/:action/*',
@@ -77,10 +77,10 @@ return array (
 					'order'        => -1000,
 					'defaults' => array (
 						'module'     => 'default',
-						//'controller' => 'index',
-						//'action'     => 'index',
+						'controller' => 'index',
+						'action'     => 'index',
 					),
-				),*/
+				),
 			),
 		),
 		'navigation' => array (

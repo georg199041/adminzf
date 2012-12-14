@@ -30,13 +30,6 @@ class Photogallery_Block_AdminAlbums_Index extends Core_Block_Grid_Widget
 			'linkOptions'    => '*/*/edit',
 			'linkBindFields' => array('id'),
 		));
-
-		$this->addColumn(array(
-			'name'  => 'grid_order',
-			'width' => '1%',
-			'align' => 'right',
-			'title' => $this->__('№п/п'),
-		));
 		
 		$this->addColumn(array(
 			'name'           => 'enabled',

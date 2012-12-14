@@ -21,8 +21,6 @@ class Default_ErrorController extends Core_Controller_Action
 	 */
     public function errorAction()
     {
-    	$this->view->headTitle('Ошибка');
-    	
         $errors = $this->_getParam('error_handler');
         
         if (!$errors) {
