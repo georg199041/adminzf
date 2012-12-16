@@ -1,0 +1,55 @@
+<?php
+
+class Videogallery_Block_AdminAlbums_Edit extends Core_Block_Form_Widget
+{
+	public function init()
+	{
+		$this->setAction('*/*save');
+		$this->getForm()->setName('formdata');
+		
+		$this->addElement('hidden','id');
+		
+		$this->addElement('text', 'title', array(
+			'label'    => $this->__('Заголовок'),
+			'required' => true,		
+		));
+		
+		$this->addElement('text', 'alias', array(
+			'label'    => $this->__('Псевдоним (УРЛ)'),
+			'required' => true,		
+		));
+		
+		$this->addElement('textarea', 'description', array(
+			'label' => $this->__('Описание'),
+			'cols' 	=> 70,
+			'rows' 	=> 15,
+			'class' => 'mce',				
+		));
+		
+		$this->addElement('checkbox', 'enabled', array(
+			'label' => 	$this->__('Включено'),
+			'checkedValue' => 'YES',
+			'uncheckedValue' => 'NO',		
+		));
+		
+		$this->addDisplayGroup(array('title', 'alias', 'description'), 'center');
+		$this->addDisplayGroup(array('video', 'enabled'), 'right');
+		
+		if(isset(Core::getSession('admin')->formData)) {
+			$this->setDefaults(Core::getSession('admn')->formData);
+			unset(Core::getSession('admin')->formData);
+		}else if (Zend_Registry::isRegistred('form_data')) {
+			$this->setDefaults(Zend_Registry::get('form_data'));
+		}
+		
+		if (isset(Core::getSession('admin')->formHasErrors) && Core::getSession('admin')->formHasErrors) {
+			$this->isValid($this->getValues());
+			unset(Core::getSession('admin')->formHasErrors);
+		}
+		
+		$this->addBlockChild(
+			Core::getBlock('videogallery/admin-albums/edit/toolbar'),
+			self::BLOCK_PLACEMENT_BEFORE		
+		);
+	}
+}
