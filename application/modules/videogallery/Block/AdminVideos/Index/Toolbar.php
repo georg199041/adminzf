@@ -1,26 +1,26 @@
 <?php
 
-class Videogallery_Block_AdminAlbums_Index_Toolbar extends Core_Block_Toolbar_Widget
+class Videogallery_Block_AdminImages_Index_toolbar extends Core_Block_Toolbar_widget
 {
 	public function init()
 	{
 		$this->setTitle($this->__('Видеозаписи видеогалереи'));
 		
 		$this->addButton(array(
-			'name'		 => 'show',
+			'name' 		 => 'show',
 			'title' 	 => $this->__('Включить'),
-			'urlOptions' => '*/*/enabled/value/YES',			
+			'urlOptions' => '*/*/enabled/value/YES',		
 		));
 		
 		$this->addButton(array(
-			'name' => 'hide',
-			'title' => $this->__('Выключить'),
-			'urlOptions' => '*/*/enabled/value/NO',			
+			'name' 		 => 'hide',
+			'title' 	 => $this->__('Выключить'),
+			'urlOptions' => '*/*/enabled/value/NO',				
 		));
 		
 		$this->addButton(array(
-			'name' => 'move',
-			'title' => $this->__('Переместить'),
+			'name' 		 => 'move',
+			'title' 	 => $this->__('Переместить'),
 			'urlOptions' => '*/*/move',			
 		));
 		
@@ -39,7 +39,7 @@ class Videogallery_Block_AdminAlbums_Index_Toolbar extends Core_Block_Toolbar_Wi
 		$this->addButton(array(
 			'name' => 'add',
 			'title' => $this->__('Создать'),
-			'urlOptions' => '*/*/edit'			
+			'urlOptions' => '*/*/edit',			
 		));
 	}
 }
