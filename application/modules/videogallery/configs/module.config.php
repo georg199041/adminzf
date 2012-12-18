@@ -22,7 +22,7 @@ return array(
 						'module' 	   => 'videogallery',
 						'controller'   => 'index',
 						'action'	   => 'album',
-						'action_alias' => '',				
+						'album_alias' => '',				
 					),
 					'map' => array(1 => 'album_alias'),
 					'reverse' => 'videogallery/%s.html'						
@@ -33,11 +33,11 @@ return array(
 			'pages' => array(
 				'default/admin-index/index' => array(
 					'pages' => array(
-						'videogallery/admin-images/index' => array(
-							'id' 		 => 'videogallery/admin-images/index',
+						'videogallery/admin-videos/index' => array(
+							'id' 		 => 'videogallery/admin-videos/index',
 							'label' 	 => 'Видеогалерея',
 							'module' 	 => 'videogallery',
-							'controller' => 'admin-images',
+							'controller' => 'admin-videos',
 							'action' 	 => 'index',
 							'pages'		 => array(
 								'videogallery/admin-albums/index' => array(

@@ -38,7 +38,7 @@ class Videogallery_Block_AdminAlbums_Edit extends Core_Block_Form_Widget
 		if(isset(Core::getSession('admin')->formData)) {
 			$this->setDefaults(Core::getSession('admn')->formData);
 			unset(Core::getSession('admin')->formData);
-		}else if (Zend_Registry::isRegistred('form_data')) {
+		}else if (Zend_Registry::isRegistered('form_data')) {
 			$this->setDefaults(Zend_Registry::get('form_data'));
 		}
 		

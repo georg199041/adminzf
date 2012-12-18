@@ -51,6 +51,7 @@ class Videogallery_Block_AdminAlbums_Index extends Core_Block_Grid_Widget
 		
 		$this->addBlockChild(array(
 			'blockName' => 'videogallery/admin-albums/index/paggination',
+			'type'            => 'pagination',
 			'totalItemsCount' => Core::getMapper('videogallery/albums')->fetchCount(),		
 		), self::BLOCK_PLACEMENT_AFTER);
 	}

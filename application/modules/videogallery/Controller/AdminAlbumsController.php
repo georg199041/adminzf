@@ -12,7 +12,7 @@ class Videogallery_AdminAlbumsController extends Core_Controller_Action
 	
 	public function editAction()
 	{
-		$id = $this->getRequest()->getParam('id');
+		$id    = $this->getRequest()->getParam('id');
 		$model = Core::getMapper('videogallery/albums')->find($id);
 		
 		if ($model->getId() || $id == 0) {
@@ -78,6 +78,80 @@ class Videogallery_AdminAlbumsController extends Core_Controller_Action
 		$this->gethelper('Redirector')->gotoRouteAndExit(Core::urlTooptions('*/*/index'));
 	}
 	
-	public function enabledAction(){}
+	public function enabledAction()
+	{
+		$ids = $this->getRequest()->getParam('ids');
+		if (!is_array($ids) && null !== $ids) {
+			$ids = array($ids => 1);
+			$this->getRequest()->setParam('value', $this->getRequest()->getParam('value') == 'YES' ? 'NO' : 'YES');
+		}
+		
+		if (nill === $ids) {
+			Core::getBlock('application/admin/messenger')->addError($this->__('Не выбрана ни одна запись'));
+		} else {
+			try {
+				foreach ($ids as $id => $selected) {
+					if ($selected) {
+						$model = Core::getMapper('videogallery/albums')->find($id);
+						$model->setEnabled($this->getRequest()->getparam('value'));
+						$model->save();
+					}
+				}
+				
+				$model = $this->getRequest()->getParam('value') == 'YES' ? 'Включено' : 'Выключено';
+				Core::getBlock('application/admin/messenger')->addSuccess($this->__($message . ' записей:') . ' ' . count($ids));
+			} catch (Exception $e) {
+				$message = $this->getRequest()->getParam('value') == 'YES' ? 'включения' : 'выключения';
+				Core::getBlock('application/admin/messenger')->addError($this->__('ошибка ' . $message));
+			}
+		}
+		
+		$this->getHelper('Redirector')->gotoRouteAndExit(Core::urlToOptions('*/*/index'), null, true);
+	}
+	
+	public function moveAction()
+	{
+		$ids = $this->getRequest()->getParam('ids');
+		if (!is_array($ids)) {
+			Core::getBlock('application/amin/messenger')->addError($this->__('не выбрана ни одна запись'));
+		} else {
+			try {
+				foreach ($ids as $id => $selected) {
+					$model = Core::getMapper('videogallery/albums')->find($id);
+					$model->setContactsGroupsId($this->getRequest()->getParam('videogallery_albums_id'));
+					$model->save();
+				}
+				
+				Core::getBlock('application/admin/messenger')->adSuccess($this->__('Перемещено записей:') . ' ' . count($ids));
+			} catch (Exception $e) {
+				Core::getBlock('application/admin/messenger')->addError($this->__('Ошибка перемещения'));
+			}
+		}
+		
+		$this->getHelper('Redirector')->gotoRouteAndExit(Core::urlToOptions('*/*/index'), null, true);
+	}
+	
+	public function copyAction()
+	{
+		$ids = $this->getRequest()->getparam('ids');
+		if (!is_array($ids)) {
+			Core::getBlock('application/admin/messenger')->addError($this->__('не выбрана ни одна запись'));
+		} else {
+			try {
+				foreach ($ids as $id => $selected) {
+					$model = Core::getMapper('videogallery/albums')->find($id);
+					$model->setId(null);
+					$model->setContactsGroupsId($this->getparam('videogallery_albums_id'));
+					$model->save();
+				}
+				
+				Core::getBlock('application/admin/messenger')->addSuccess($this->__('Скопировано записей:') . ' ' . count($ids));
+			} catch (Exception $e) {
+				Core::getBlock('application/admin/messenger')->addError($this->__('Ошибка копирования'));
+			}
+		}
+		
+		$this->gethelper('Redirector')->gotoRouteAndExit(Core::urlToOptions('*/*/index'), null, true);
+	}
 	
 }

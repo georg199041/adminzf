@@ -1,6 +1,6 @@
 <?php
 
-class Videogallery_Block_AlbumVideos_Index extends Core_Block_Grid_Widget
+class Videogallery_Block_AdminVideos_Index extends Core_Block_Grid_Widget
 {
 	public function init()
 	{
@@ -67,11 +67,11 @@ class Videogallery_Block_AlbumVideos_Index extends Core_Block_Grid_Widget
 		), self::BLOCK_PLACEMENT_AFTER);
 		
 		$this->setData(Core::getMapper('videogallery/videos')->fetchAll(
-			$this->createWere(),
+			$this->createWhere(),
 			null,
 			$this->getBlockChild('videogallery/admin-videos/index/pagination')->getItemCountPerPage(),
 			Core::getmapper('videogallery/videos')->pageToOffset(
-				$this->getBlockChild('videogallery.admin-videos/index/pagination')->getItemCountPerPage(),
+				$this->getBlockChild('videogallery/admin-videos/index/pagination')->getItemCountPerPage(),
 				$this->getRequest()->getParam('page', 1)	
 			)				
 		));
@@ -101,10 +101,21 @@ class Videogallery_Block_AlbumVideos_Index extends Core_Block_Grid_Widget
 	
 	protected function _formatVideogalleryAlbumsTree($collection, array $reult = array(), $depth = 0)
 	{
+		foreach ($collection as $item) {
+			$result[$item->getId()] = str_repeat('--', $depth) ." ". $item->getTitle(); 
+			$result = $this->_formatVideogalleryAlbumsTree($item->getChilds(), $result, $depth + 1);
+		}
+		
+		return $result;
+	}
+	
+	protected $_videogalleryAlbumsId;
+	public function getVideogalleryAlbumsId()
+	{
 		if (null === $this->_videogalleryAlbumsId) {
 			$this->_videogalleryAlbumsId = $this->_formatVideogalleryAlbumsTree(Core::getMapper('videogallery/albums')->fetchTree(), array('Нет'));
 		}
 		
-		return $this->_videogalleryAlbumsid;
+		return $this->_videogalleryAlbumsId;
 	}
 } 

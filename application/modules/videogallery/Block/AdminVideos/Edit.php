@@ -7,13 +7,13 @@ class Videogallery_Block_AdminVideos_Edit extends Core_Block_Form_Widget
 		$this->setAction('*/*/save');
 		$this->getForm()->setName('form_data');
 		
-		$this->addElement('hidden', 'id');
+ 		$this->addElement('hidden', 'id');
 		
 		$this->addElement('text', 'title', array(
 			'label' => $this->__('Заголовок'),
 			'required'	=> true,	
 		));
-		
+ 		
 		$this->addElement('textarea', 'description', array(
 			'label' => $this->__('Описание'),
 			'cols' => 70,
@@ -21,17 +21,17 @@ class Videogallery_Block_AdminVideos_Edit extends Core_Block_Form_Widget
 			'class' => 'mce',				
 		));
 		
-		$this->addElements('select', 'videogallery_albums_id', array(
-			'label' => $this->__('Альбом'),
+		$this->addElement('select', 'videogallery_albums_id', array(
+			'label' 	   => $this->__('Альбом'),
 			'multiOptions' => $this->getVideogalleryAlbumsId(),		
 		));
-		
+
 		$this->addElement('text', 'video', array(
 			'label' => $this->__('Видео'),	
 		));
 		
-		$this->getElement('image')->setDecorators(array(
-			array('CombinatedElement', array('btns' => array('select' => array('label' => 'Выбрать'))))	
+		$this->getElement('video')->setDecorators(array(
+			array('CombinedElement', array('btns' => array('select' => array('label' => 'Выбрать'))))	
 		));
 		
 		$this->addElement('checkbox', 'enabled', array(

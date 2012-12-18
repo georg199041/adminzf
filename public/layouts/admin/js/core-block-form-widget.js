@@ -47,6 +47,15 @@ jQuery(document).ready(function(){
 		});
 	});
 	
+	jQuery('.cbfw-tag-addbtn-video__select').on('click', function(){
+		mcFileManager.browse({
+		    fields : jQuery(this).siblings('input').attr('name'),
+		    document_base_url : '/',
+	        remove_script_host : true,
+	        relative_urls : false
+		});
+	});
+	
 	jQuery(".cbfw-tag__image input, .cbfw-tag__image-hover input, .cbfw-tag__image-left input, .cbfw-tag__image-right input").qtip({
 		content: '',
 		position: { target: 'mouse' },

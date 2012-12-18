@@ -1,6 +1,6 @@
 <?php
 
-class Videogallery_Block_AdminImages_Index_toolbar extends Core_Block_Toolbar_widget
+class Videogallery_Block_AdminVideos_Index_toolbar extends Core_Block_Toolbar_widget
 {
 	public function init()
 	{
