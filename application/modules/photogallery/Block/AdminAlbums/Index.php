@@ -32,12 +32,12 @@ class Photogallery_Block_AdminAlbums_Index extends Core_Block_Grid_Widget
 		));
 		
 		$this->addColumn(array(
-			'name'           => 'enabled',
-			'type'           => 'checkbox',
-			'title'          => $this->__('On'),
-			'checkedValue'   => 'YES',
-			'uncheckedValue' => 'NO',
-			'width'          => '1%',
+			'name'           	=> 'enabled',
+			'type'           	=> 'checkbox',
+			'title'          	=> $this->__('On'),
+			'checkedValue'   	=> 'YES',
+			'uncheckedValue' 	=> 'NO',
+			'width'          	=> '1%',
 			'formactionOptions' => '*/*/enabled',
 			'formactionBind'    => array('value' => 'enabled', 'ids' => 'id')
 		));
